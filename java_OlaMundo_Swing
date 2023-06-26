@@ -1,0 +1,18 @@
+package cursoemvideo.olamundo;
+
+public class OlaMundoJava extends javax.swing.JFrame {
+
+    public OlaMundoJava() {
+        initComponents();
+    } 
+    private void btnClickActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        lblMensagem.setText("Bem vindo a Java");
+    }   
+    public static void main(String args[]) {
+        
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new OlaMundoJava().setVisible(true);
+            }
+        });
+    }
