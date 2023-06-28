@@ -1,0 +1,21 @@
+ package com.cursoemvideo.operadores;
+
+public class TelaValores extends javax.swing.JFrame {
+    public TelaValores() {
+        initComponents();
+    }
+    private void btnDividirActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        int n = Integer.parseInt(txtNum.getText());
+        int d = Integer.parseInt(txtDen.getText()); 
+        float div = n/d;
+        float res = (float) Math.sqrt(n);
+        lblDiv.setText(Float.toString(div));
+        lblRes.setText(Float.toString(res));
+
+    public static void main(String args[]) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new TelaValores().setVisible(true);
+            }
+        });
+    }
