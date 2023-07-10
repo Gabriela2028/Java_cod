@@ -1,0 +1,38 @@
+package classes;
+
+public class TelaCalc extends javax.swing.JFrame {
+
+    public TelaCalc() {
+        initComponents();
+        panCalc.setVisible(false);
+    }
+
+    private void btnCalcActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        int num = Integer.parseInt(txtNum.getValue().toString());
+        //Resto da divisão por 2 
+        int r = num % 2;
+        lblResto.setText(Integer.toString(r));
+        //Elevado ao cubo
+        double c = Math.pow(num, 3);
+        lblCubo.setText(Double.toString(c));
+        //Raiz quadrada
+        double rq = Math.sqrt(num);
+        lblRaizQ.setText(String.format("%.2f",rq));
+        //Raiz Cubica
+        double rc = Math.cbrt(num);
+        lblRaizC.setText(String.format("%.2f", rc));
+        //valor absoluto
+        int abs = Math.abs(num);
+        lblAbs.setText(Integer.toString(abs));
+        panCalc.setVisible(true);
+    } 
+
+    public static void main(String args[]) {
+
+
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new TelaCalc().setVisible(true);
+            }
+        });
+    }
